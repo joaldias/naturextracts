@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #84cc16;
+    --primary-hover: #65a30d;
+    --accent: #eab308;
+    --dark-green: #3f6212;
+    --text-color: #374151;
+    --bg-light: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(132, 204, 22, 0.2);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius: 16px;
+}
+
+body, html, h1, h2, h3, h4, h5, h6, p, a, li, span, button {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+body {
+    background-color: var(--bg-light) !important;
+    color: var(--text-color) !important;
+    line-height: 1.625;
+}
+
+/* Glassmorphism Header */
+.uk-navbar-container, .tm-header-mobile {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all 0.3s ease;
+}
+
+.uk-navbar-nav > li > a {
+    color: var(--dark-green) !important;
+    font-weight: 500 !important;
+    font-size: 1.05rem !important;
+}
+
+.uk-navbar-nav > li > a:hover, .uk-navbar-nav > li.uk-active > a {
+    color: var(--primary) !important;
+}
+
+/* Rounded Cards */
+.uk-card, .uk-panel, .el-item, .wk-panel, .product-item {
+    background: #ffffff !important;
+    border-radius: var(--radius) !important;
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    box-shadow: var(--shadow-md) !important;
+    padding: 24px !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease !important;
+}
+
+.uk-card:hover, .uk-panel:hover, .el-item:hover, .wk-panel:hover, .product-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--glass-border) !important;
+}
+
+/* Buttons */
+.uk-button-primary, .uk-button-default, .uk-button {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.025em !important;
+    text-transform: none !important;
+    transition: all 0.25s ease !important;
+}
+
+.uk-button-primary {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.uk-button-primary:hover {
+    background-color: var(--primary-hover) !important;
+    box-shadow: 0 4px 12px rgba(132, 204, 22, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Custom badges */
+.uk-badge {
+    background: var(--accent) !important;
+    color: #ffffff !important;
+}
+
+img {
+    border-radius: 12px !important;
+    transition: transform 0.3s ease !important;
+}
+
+h1, h2, h3, .uk-h1, .uk-h2, .uk-h3 {
+    color: var(--dark-green) !important;
+    font-weight: 700 !important;
+}
